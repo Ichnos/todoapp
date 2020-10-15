@@ -12,8 +12,10 @@
 	<tr>
 		<th><%= todo.name  %></th>
 		<th><%= todo.description  %></th>
-		<th><%= link_to "edit", edit_todo_path(todo) %></th>
-		<th><%= link_to "show", todo_path(todo) %></th>
+		<th><%= link_to "Edit", edit_todo_path(todo) %></th>
+		<th><%= link_to "Show", todo_path(todo) %></th>
+		<td><%= link_to "Delete", todo_path(todo), method: :delete, 
+                                 data: { confirm: "Are you sure?"} %></td>
 	</tr>
 	<% end %>
 </table>
